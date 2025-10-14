@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".SecondActivity">
+
+    <!-- 1. TextView con título (saludo) -->
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        tools:text="Hola!!!!!" />
+
+    <!-- 2. CardView con título, subtítulo e imagen -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:contentPadding="16dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/card_image"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="Imagen de la tarjeta"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título de la Tarjeta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:id="@+id/card_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Este es el subtítulo de la tarjeta."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 3. Imagen (fuera de la tarjeta) -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:contentDescription="Logo adicional"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Contenedor para los botones -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 4. Botón para ir a Inicio -->
+        <Button
+            android:id="@+id/btnGoToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir a Inicio"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- 5. Botón para abrir página de CUValles -->
+        <Button
+            android:id="@+id/btnOpenCuvalles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abrir CUValles" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    
